@@ -1,0 +1,60 @@
+import os
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+from optparse import OptionParser
+import GA
+
+parser = argparse.ArgumentParser(description='TSP Solver Team 22')
+parser.add_argument('-inst', nargs="?")
+parser.add_argument('-alg', nargs="?")
+parser.add_argument('-time', type=int)
+parser.add_argument('-seed', type=int)
+
+
+args = parser.parse_args()
+method = args.alg
+instance = args.inst.split(".")[0]
+max_time = args.time
+random_seed = args.seed
+
+if(method=='GA'):
+
+	n_GA=int(open('../data/'+instance+'.tsp').readlines()[2][len('DIMENSION: '):])
+	input_GA=np.loadtxt("../data/"+instance+".tsp",skiprows=5,max_rows=n)
+	input_xy_GA = []
+	for i in input_GA:
+    	input_xy_GA.append((i[1], i[2]))
+    cityList = []
+	for i in range(0,len(input_xy_GA)):
+    	cityList.append(City(x=input_xy_GA[i][0], y=input_xy_GA[i][1]))
+
+	min_dist, route, trace = geneticAlgorithm(population=cityList, popSize=100, eliteSize=20, mutationRate=0.01, generations=500, max_time, random_seed)
+
+
+elif(method == 'BnB'):
+	# complete-code
+
+elif(method == 'Approx'):
+	# complete-code
+
+elif(method == 'LS1'):
+	# complete-code
+
+
+trace = [",".join(map(str,x)) for x in trace]
+tour_data = []
+tour_data.append(min_dist)
+tour_data.append(",".join(map(str,route)))  
+
+outname = "./output/" +  file_name + "_" + method + "_" + str(max_time) + "_" + str(random_seed)
+
+f_out = open(outname + ".tour", "w")
+write_output(f_out,tour_data)
+f_out.close()
+f_out_tr = open(outname + ".trace", "w")
+write_output(f_out_tr, trace_data)
+f_out_tr.close()
+
+
+	
