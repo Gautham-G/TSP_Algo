@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from optparse import OptionParser
 import GA
+import SA
 
 parser = argparse.ArgumentParser(description='TSP Solver Team 22')
 parser.add_argument('-inst', nargs="?")
