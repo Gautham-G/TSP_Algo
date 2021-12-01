@@ -26,7 +26,7 @@ if(method=='GA'):
 	input_xy_GA = []
 	for i in input_GA:
     	input_xy_GA.append((i[1], i[2]))
-    	cityList = []
+    cityList = []
 	for i in range(0,len(input_xy_GA)):
     	cityList.append(City(x=input_xy_GA[i][0], y=input_xy_GA[i][1]))
 
@@ -46,7 +46,7 @@ elif(method == 'SA'):
 	input_xy_SA = []
 	for i in input_SA:
     	input_xy_SA.append((i[1], i[2]))
-    	cityList = []
+    cityList = []
 	for i in range(0,len(input_xy_SA)):
     	cityList.append(City(x=input_xy_SA[i][0], y=input_xy_SA[i][1]))
 
