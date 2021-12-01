@@ -38,9 +38,18 @@ elif(method == 'BnB'):
 elif(method == 'Approx'):
 	# complete-code
 
-elif(method == 'LS1'):
+elif(method == 'SA'):
 	# complete-code
+	n_SA=int(open('../data/'+instance+'.tsp').readlines()[2][len('DIMENSION: '):])
+	input_SA=np.loadtxt("../data/"+instance+".tsp",skiprows=5,max_rows=n)
+	input_xy_SA = []
+	for i in input_SA:
+    	input_xy_SA.append((i[1], i[2]))
+    cityList = []
+	for i in range(0,len(input_xy_SA)):
+    	cityList.append(City(x=input_xy_SA[i][0], y=input_xy_SA[i][1]))
 
+	min_dist, route, trace = simanneal(cityList, max_iter = 100000)
 
 trace = [",".join(map(str,x)) for x in trace]
 tour_data = []
