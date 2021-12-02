@@ -3,7 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import networkx as nx
-import numpy as np
 from scipy.spatial import distance_matrix
 from optparse import OptionParser
 import GA
