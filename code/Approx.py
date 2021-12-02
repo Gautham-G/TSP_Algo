@@ -17,7 +17,7 @@ def Approx(G, max_time):
     if(edge[0] not in visited_nodes):
       tour_nodes.append(edge[0])
     visited_nodes.append(edge[0])
-  # complete the shortcutted cyle
+  # complete the shortcutted cycle
   tour_nodes.append(tour_nodes[0])
   finish = time.time()
   dist = nx.path_weight(G,tour_nodes, 'weight')
