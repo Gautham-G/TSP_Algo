@@ -5,6 +5,8 @@ import pandas as pd
 from optparse import OptionParser
 import GA
 import SA
+import Approx
+import BnB
 
 parser = argparse.ArgumentParser(description='TSP Solver Team 22')
 parser.add_argument('-inst', nargs="?")
@@ -34,10 +36,14 @@ if(method=='GA'):
 
 
 elif(method == 'BnB'):
-	# complete-code
+	input=np.loadtxt(instance,skiprows=5,max_rows=n)
+	G = nx.from_numpy_matrix(np.matrix.round(distance_matrix(input[:,1:],input[:,1:])).astype(np.int32))
+	BnB(G,max_time)
 
 elif(method == 'Approx'):
-	# complete-code
+	input=np.loadtxt(instance,skiprows=5,max_rows=n)
+	G = nx.from_numpy_matrix(np.matrix.round(distance_matrix(input[:,1:],input[:,1:])).astype(np.int32))
+	Approx(G,max_time)
 
 elif(method == 'SA'):
 	# complete-code
