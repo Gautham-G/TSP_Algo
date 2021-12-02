@@ -25,10 +25,10 @@ if(method=='GA'):
 	input_GA=np.loadtxt("../data/"+instance+".tsp",skiprows=5,max_rows=n)
 	input_xy_GA = []
 	for i in input_GA:
-    	input_xy_GA.append((i[1], i[2]))
-    cityList = []
+		input_xy_GA.append((i[1], i[2]))
+	cityList = []
 	for i in range(0,len(input_xy_GA)):
-    	cityList.append(City(x=input_xy_GA[i][0], y=input_xy_GA[i][1]))
+		cityList.append(City(x=input_xy_GA[i][0], y=input_xy_GA[i][1]))
 
 	min_dist, route, trace = geneticAlgorithm(population=cityList, popSize=100, eliteSize=20, mutationRate=0.01, generations=500, max_time, random_seed)
 
@@ -45,10 +45,10 @@ elif(method == 'SA'):
 	input_SA=np.loadtxt("../data/"+instance+".tsp",skiprows=5,max_rows=n)
 	input_xy_SA = []
 	for i in input_SA:
-    	input_xy_SA.append((i[1], i[2]))
-    cityList = []
+		input_xy_SA.append((i[1], i[2]))
+	cityList = []
 	for i in range(0,len(input_xy_SA)):
-    	cityList.append(City(x=input_xy_SA[i][0], y=input_xy_SA[i][1]))
+		cityList.append(City(x=input_xy_SA[i][0], y=input_xy_SA[i][1]))
 
 	min_dist, route, trace = simanneal(cityList, max_iter = 100000)
 
