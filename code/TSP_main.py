@@ -38,12 +38,12 @@ if(method=='GA'):
 elif(method == 'BnB'):
 	input=np.loadtxt(instance,skiprows=5,max_rows=n)
 	G = nx.from_numpy_matrix(np.matrix.round(distance_matrix(input[:,1:],input[:,1:])).astype(np.int32))
-	min_dist, route, trace, a = BnB(G,max_time)
+	min_dist, route, trace, runtime = BnB(G,max_time)
 
 elif(method == 'Approx'):
 	input=np.loadtxt(instance,skiprows=5,max_rows=n)
 	G = nx.from_numpy_matrix(np.matrix.round(distance_matrix(input[:,1:],input[:,1:])).astype(np.int32))
-	min_dist, route, trace, a = Approx(G,max_time)
+	min_dist, route, trace, runtime = Approx(G,max_time)
 
 elif(method == 'SA'):
 	# complete-code
