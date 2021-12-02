@@ -23,7 +23,7 @@ random_seed = args.seed
 
 if(method=='GA'):
 
-	n_GA=int(open('../data/'+instance+'.tsp').readlines()[2][len('DIMENSION: '):])
+	n_GA=int(open(instance).readlines()[2][len('DIMENSION: '):])
 	input_GA=np.loadtxt(instance,skiprows=5,max_rows=n)
 	input_xy_GA = []
 	for i in input_GA:
@@ -47,7 +47,7 @@ elif(method == 'Approx'):
 
 elif(method == 'SA'):
 	# complete-code
-	n_SA=int(open('../data/'+instance+'.tsp').readlines()[2][len('DIMENSION: '):])
+	n_SA=int(open(instance).readlines()[2][len('DIMENSION: '):])
 	input_SA=np.loadtxt(instance,skiprows=5,max_rows=n)
 	input_xy_SA = []
 	for i in input_SA:
