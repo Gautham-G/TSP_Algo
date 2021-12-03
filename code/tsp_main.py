@@ -10,6 +10,7 @@ import argparse
 import SA
 import Approx
 import BnB
+import sys
 
 parser = argparse.ArgumentParser(description='TSP Solver Team 22')
 parser.add_argument('-inst', nargs="?")
@@ -26,7 +27,7 @@ random_seed = args.seed
 
 if(method=='GA'):
 
-	n_GA=int(open(sys.path[0]+instance).readlines()[2][len('DIMENSION: '):])
+	n_GA=int(open('./data/'+instance).readlines()[2][len('DIMENSION: '):])
 	input_GA=np.loadtxt(instance,skiprows=5,max_rows=n_GA)
 	input_xy_GA = []
 	for i in input_GA:
