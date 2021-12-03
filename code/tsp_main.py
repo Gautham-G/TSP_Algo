@@ -70,7 +70,7 @@ f_out = open(outname + ".tour", "w")
 write_output(f_out,tour_data)
 f_out.close()
 f_out_tr = open(outname + ".trace", "w")
-write_output(f_out_tr, trace_data)
+write_output(f_out_tr, trace)
 f_out_tr.close()
 
 
