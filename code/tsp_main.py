@@ -48,8 +48,8 @@ elif(method == 'Approx'):
 
 elif(method == 'SA'):
 	# complete-code
-	n_SA=int(open(instance).readlines()[2][len('DIMENSION: '):])
-	input_SA=np.loadtxt(instance,skiprows=5,max_rows=n_SA)
+	n_SA=int(open('../data/'+instance).readlines()[2][len('DIMENSION: '):])
+	input_SA=np.loadtxt('../data/'+instance,skiprows=5,max_rows=n_SA)
 	input_xy_SA = []
 	for i in input_SA:
 		input_xy_SA.append((i[1], i[2]))
