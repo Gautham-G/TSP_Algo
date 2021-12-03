@@ -25,6 +25,11 @@ instance = args.inst
 max_time = args.time
 random_seed = args.seed
 
+def write_output(file_ptr,datalines):
+    for i in datalines:
+        file_ptr.write(str(i) + "\n")
+
+
 if(method=='GA'):	
 	min_dist, route, trace = runGA(instance, max_time, random_seed)
 
