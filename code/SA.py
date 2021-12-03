@@ -11,7 +11,7 @@ class simanneal(object):
         self.points = points
         self.n = len(points)
         self.T = (self.n)**0.5
-        self.alpha = 0.9995
+        self.alpha = 0.5
         self.min_T = 10**(-8)
         self.max_time = max_time
         self.iter = 1
