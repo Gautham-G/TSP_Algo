@@ -25,10 +25,8 @@ instance = args.inst
 max_time = args.time
 random_seed = args.seed
 
-if(method=='GA'):
-	print(instance)
-	
-	min_dist, route, trace = RunGA(instance, max_time, random_seed)
+if(method=='GA'):	
+	min_dist, route, trace = runGA(instance, max_time, random_seed)
 
 elif(method == 'BnB'):
 	input=np.loadtxt(instance,skiprows=5,max_rows=n)
