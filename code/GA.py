@@ -232,7 +232,7 @@ def nextGeneration(currentGen, eliteSize, mutationRate):
 
 
     
-def geneticAlgorithm(population, popSize, eliteSize, mutationRate, generations, max_time, random_seed):
+def geneticAlgorithm(population, popSize, eliteSize, mutationRate, generations, max_time, random_seed, input):
     random.seed(random_seed)
     start = time.time()
     trace = []
@@ -280,7 +280,7 @@ def runGA(instance, max_time, random_seed):
         cityList.append(City(x=input_xy_GA[i][0], y=input_xy_GA[i][1]))
 
 	
-    min_dist, route, trace = geneticAlgorithm(population=cityList, popSize=100, eliteSize=20, mutationRate=0.01, generations=500, max_time = max_time, random_seed = random_seed)
+    min_dist, route, trace = geneticAlgorithm(population=cityList, popSize=100, eliteSize=20, mutationRate=0.01, generations=500, max_time = max_time, random_seed = random_seed, input_GA)
     return min_dist, route, trace
 
 # ## Running the genetic algorithm
