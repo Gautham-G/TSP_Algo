@@ -26,7 +26,7 @@ random_seed = args.seed
 
 if(method=='GA'):
 
-	n_GA=int(open(../data/instance).readlines()[2][len('DIMENSION: '):])
+	n_GA=int(open('../data/'+instance).readlines()[2][len('DIMENSION: '):])
 	input_GA=np.loadtxt(instance,skiprows=5,max_rows=n)
 	input_xy_GA = []
 	for i in input_GA:
