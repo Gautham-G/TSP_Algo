@@ -246,7 +246,7 @@ def geneticAlgorithm(population,max_time, random_seed, input_GA, popSize, eliteS
             fin_dist.append(int(1 / rankRoutes(pop)[0][1]))
             if(len(fin_dist)>1):
                 if(fin_dist[-1]<fin_dist[-2]):
-                    trace.append([time.time()-start,fin_dist[-1]])
+                    trace.append([round(time.time()-start, 2),fin_dist[-1]])
         else:
             break
     
