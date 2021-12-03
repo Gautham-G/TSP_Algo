@@ -21,7 +21,7 @@ parser.add_argument('-seed', type=int)
 
 args = parser.parse_args()
 method = args.alg
-instance = args.inst.split(".")[0]
+instance = args.inst
 max_time = args.time
 random_seed = args.seed
 
