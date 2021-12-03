@@ -58,7 +58,7 @@ class simanneal(object):
     
     def executeanneal(self):
         
-        rd.
+        rd.seed(self.seed)
         start = time.time()
         trace = []
         self.present_sol, self.present_dist = self.randompick() 
