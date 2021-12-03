@@ -8,8 +8,8 @@ from optparse import OptionParser
 from GA import *
 import argparse
 from SA import *
-import Approx
-import BnB
+from Approx import *
+from BnB import *
 import sys
 
 parser = argparse.ArgumentParser(description='TSP Solver Team 22')

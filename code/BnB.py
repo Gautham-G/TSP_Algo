@@ -4,7 +4,7 @@ import pandas as pd
 from scipy.spatial import distance_matrix
 from queue import PriorityQueue
 import time
-import Approx
+from Approx import *
 
 def BnB(G, max_time):
   start = time.time()
