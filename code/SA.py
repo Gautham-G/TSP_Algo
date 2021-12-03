@@ -72,10 +72,10 @@ class simanneal(object):
             self.iter += 1
             self.best_list.append(self.present_dist)
             
-        print("Solution obtained: ", self.present_dist)
+        #print("Solution obtained: ", self.present_dist)
         #print("Best route: ", self.optimal_solution)
         
-        #return self.present_dist, self.optimal_solution, trace 
+        return self.present_dist, self.optimal_solution, trace 
     
     def criterion(self, nextelem):
         
