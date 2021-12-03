@@ -12,7 +12,7 @@ class simanneal(object):
         self.n = len(points)
         self.T_max = (self.n)**0.5
         self.T = self.T_max
-        self.alpha = 0.9
+        self.alpha = 0.995
         self.min_T = 10**(-8)
         self.max_time = max_time
         self.iter = 1
@@ -69,7 +69,7 @@ class simanneal(object):
             flag = self.criterion(nextelem)
             if flag == 1:
                 trace.append([np.round((time.time()-start),2), self.present_dist])
-            self.T = self.T_max - self.alpha*(self.iter)
+            self.T *= self.alpha
             self.iter += 1
             self.best_list.append(self.present_dist)
             
