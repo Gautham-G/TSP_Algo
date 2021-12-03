@@ -63,8 +63,8 @@ tour_data.append(min_dist)
 tour_data.append(",".join(map(str,route)))  
 
 file_name = instance.split('.')[-2].split('/')[-1]
-print(instance.split('.')[-2])
-print(file_name)
+# print(instance.split('.')[-2])
+# print(file_name)
 
 # file_name = instance
 if(method=='BnB' or method=='Approx'):
