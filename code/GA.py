@@ -268,7 +268,7 @@ def geneticAlgorithm(population, popSize, eliteSize, mutationRate, generations, 
 
     return final_dist, best_route_GA, trace
 
-def Run_GA(instance, max_time, random_seed):
+def runGA(instance, max_time, random_seed):
     n_GA=int(open(instance).readlines()[2][len('DIMENSION: '):])
 	
     input_GA=np.loadtxt(instance,skiprows=5,max_rows=n_GA)
