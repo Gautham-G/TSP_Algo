@@ -7,7 +7,7 @@ from scipy.spatial import distance_matrix
 from optparse import OptionParser
 from GA import *
 import argparse
-import SA
+from SA import *
 import Approx
 import BnB
 import sys
