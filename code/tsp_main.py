@@ -63,7 +63,10 @@ tour_data.append(min_dist)
 tour_data.append(",".join(map(str,route)))  
 
 file_name = instance
-outname = "../output/" +  file_name + "_" + method + "_" + str(max_time) + "_" + str(random_seed)
+if(method=='BnB' or method=='Approx'):
+	outname = "../output/" +  file_name + "_" + method + "_" + str(max_time)
+else:
+	outname = "../output/" +  file_name + "_" + method + "_" + str(max_time) + "_" + str(random_seed)
 
 f_out = open(outname + ".tour", "w")
 write_output(f_out,tour_data)
@@ -71,6 +74,3 @@ f_out.close()
 f_out_tr = open(outname + ".trace", "w")
 write_output(f_out_tr, trace)
 f_out_tr.close()
-
-
-	
