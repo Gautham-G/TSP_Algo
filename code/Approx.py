@@ -32,7 +32,7 @@ def Approx(G, max_time):
   # complete the shortcutted cycle
   tour_nodes.append(tour_nodes[0])
   finish = time.time()
-  dist = nx.path_weight(G,tour_nodes, 'weight')
+  dist = path_weight(G,tour_nodes, 'weight')
   tour = tour_nodes
   trace = [[round(finish-start, 2), dist]]
   runtime = min(trace[-1][0], max_time)
