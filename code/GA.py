@@ -265,7 +265,7 @@ def geneticAlgorithm(population,max_time, random_seed, input_GA, popSize, eliteS
         for p in input_GA:
             if(q[0]==p[1]):
                 if(q[1]==p[2]):
-                    print('hi')
+#                     print('hi')
                     best_route_GA.append(int(p[0]-1))
 
     return final_dist, best_route_GA, trace
