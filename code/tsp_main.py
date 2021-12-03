@@ -63,6 +63,7 @@ tour_data = []
 tour_data.append(min_dist)
 tour_data.append(",".join(map(str,route)))  
 
+file_name = instance
 outname = "./output/" +  file_name + "_" + method + "_" + str(max_time) + "_" + str(random_seed)
 
 f_out = open(outname + ".tour", "w")
