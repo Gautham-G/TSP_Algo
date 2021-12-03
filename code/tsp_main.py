@@ -26,7 +26,7 @@ max_time = args.time
 random_seed = args.seed
 
 if(method=='GA'):
-
+	print(instance)
 	n_GA=int(open(r'../data/'+instance).readlines()[2][len('DIMENSION: '):])
 	input_GA=np.loadtxt(instance,skiprows=5,max_rows=n_GA)
 	input_xy_GA = []
