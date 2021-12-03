@@ -4,6 +4,18 @@ import pandas as pd
 from scipy.spatial import distance_matrix
 import time
 
+def path_weight(G, path, weight):
+#     multigraph = G.is_multigraph()
+    cost = 0
+
+    if not nx.is_path(G, path):
+        raise nx.NetworkXNoPath("path does not exist")
+    for node, nbr in nx.utils.pairwise(path):
+#         if multigraph:
+#             cost += min([v[weight] for v in G[node][nbr].values()])
+
+        cost += G[node][nbr][weight]
+    return cost
 def Approx(G, max_time):
   start = time.time()
   # MST via Kruskal's algorithm
