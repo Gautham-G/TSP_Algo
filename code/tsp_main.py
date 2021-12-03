@@ -27,17 +27,8 @@ random_seed = args.seed
 
 if(method=='GA'):
 	print(instance)
-	n_GA=int(open(instance).readlines()[2][len('DIMENSION: '):])
-	input_GA=np.loadtxt(instance,skiprows=5,max_rows=n_GA)
-	input_xy_GA = []
-	for i in input_GA:
-		input_xy_GA.append((i[1], i[2]))
-	cityList = []
-	for i in range(0,len(input_xy_GA)):
-		cityList.append(City(x=input_xy_GA[i][0], y=input_xy_GA[i][1]))
-
-	min_dist, route, trace = geneticAlgorithm(population=cityList, popSize=100, eliteSize=20, mutationRate=0.01, generations=500, max_time = max_time, random_seed = random_seed)
-
+	
+	min_dist, route, trace = RunGA(instance, max_time, random_seed)
 
 elif(method == 'BnB'):
 	input=np.loadtxt(instance,skiprows=5,max_rows=n)
