@@ -21,13 +21,18 @@ parser.add_argument('-seed', type=int)
 
 args = parser.parse_args()
 method = args.alg
-instance = args.inst.split(".")[0]
+instance = args.inst
 max_time = args.time
 random_seed = args.seed
 
+def write_output(file_ptr,datalines):
+    for i in datalines:
+        file_ptr.write(str(i) + "\n")
+
+
 if(method=='GA'):
 
-	n_GA=int(open('../data/'+instance+'.tsp').readlines()[2][len('DIMENSION: '):])
+	n_GA=int(open('../data/'+instance).readlines()[2][len('DIMENSION: '):])
 	input_GA=np.loadtxt(instance,skiprows=5,max_rows=n_GA)
 	input_xy_GA = []
 	for i in input_GA:
