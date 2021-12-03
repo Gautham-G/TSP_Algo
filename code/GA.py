@@ -9,7 +9,7 @@ import random
 import operator
 import pandas as pd
 import matplotlib.pyplot as plt
-
+import time
 
 # In[77]:
 
