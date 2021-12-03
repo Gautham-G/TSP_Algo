@@ -35,8 +35,8 @@ if(method=='GA'):
 # 	print(type(route))
 
 elif(method == 'BnB'):
-	n=int(open(instance).readlines()[2][len('DIMENSION: '):])
-	input=np.loadtxt(instance,skiprows=5,max_rows=n)
+	n=int(open('../data/'+instance).readlines()[2][len('DIMENSION: '):])
+	input=np.loadtxt('../data/'+instance,skiprows=5,max_rows=n)
 	G = nx.from_numpy_matrix(np.matrix.round(distance_matrix(input[:,1:],input[:,1:])).astype(np.int32))
 	min_dist, route, trace, runtime = BnB(G,max_time)
 
