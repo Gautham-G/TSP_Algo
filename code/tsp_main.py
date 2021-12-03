@@ -13,7 +13,7 @@ import BnB
 import sys
 
 parser = argparse.ArgumentParser(description='TSP Solver Team 22')
-parser.add_argument('-inst', nargs="?", type=string)
+parser.add_argument('-inst', nargs="?", type=str)
 parser.add_argument('-alg', nargs="?")
 parser.add_argument('-time', type=int)
 parser.add_argument('-seed', type=int)
