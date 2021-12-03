@@ -28,7 +28,7 @@ def BnB(G, max_time):
       if len(G.nodes-subtour)==0:
         # complete solution
         tour = subtour+[subtour[0]]
-        cost = nx.path_weight(G, tour, 'weight')
+        cost = path_weight(G, tour, 'weight')
         if cost < best[0]:
           # new best solution, else dead end and do nothing
           best=(cost, tour)
@@ -37,7 +37,7 @@ def BnB(G, max_time):
         # incomplete solution
         subproblem=G.subgraph(G.nodes-subtour)
         mst_cost=nx.minimum_spanning_tree(subproblem).size(weight='weight')
-        subtour_cost=nx.path_weight(G,subtour,'weight')
+        subtour_cost=path_weight(G,subtour,'weight')
         min_weight_edge_start = np.infty
         min_weight_edge_end = np.infty
         for node in subproblem:
