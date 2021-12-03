@@ -29,11 +29,13 @@ if(method=='GA'):
 	min_dist, route, trace = runGA(instance, max_time, random_seed)
 
 elif(method == 'BnB'):
+	n=int(open('DATA/'+instance+'.tsp').readlines()[2][len('DIMENSION: '):])
 	input=np.loadtxt(instance,skiprows=5,max_rows=n)
 	G = nx.from_numpy_matrix(np.matrix.round(distance_matrix(input[:,1:],input[:,1:])).astype(np.int32))
 	min_dist, route, trace, runtime = BnB(G,max_time)
 
 elif(method == 'Approx'):
+	n=int(open('DATA/'+instance+'.tsp').readlines()[2][len('DIMENSION: '):])
 	input=np.loadtxt(instance,skiprows=5,max_rows=n)
 	G = nx.from_numpy_matrix(np.matrix.round(distance_matrix(input[:,1:],input[:,1:])).astype(np.int32))
 	min_dist, route, trace, runtime = Approx(G,max_time)
@@ -41,7 +43,7 @@ elif(method == 'Approx'):
 elif(method == 'SA'):
 	# complete-code
 	n_SA=int(open(instance).readlines()[2][len('DIMENSION: '):])
-	input_SA=np.loadtxt(instance,skiprows=5,max_rows=n)
+	input_SA=np.loadtxt(instance,skiprows=5,max_rows=n_SA)
 	input_xy_SA = []
 	for i in input_SA:
 		input_xy_SA.append((i[1], i[2]))
