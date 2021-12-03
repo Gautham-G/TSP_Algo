@@ -282,7 +282,7 @@ def runGA(instance, max_time, random_seed):
         cityList.append(City(x=input_xy_GA[i][0], y=input_xy_GA[i][1]))
 
 	
-    min_dist, route, trace = geneticAlgorithm(population=cityList, max_time = max_time, random_seed = random_seed, input_GA=input_xy_GA, popSize=100, eliteSize=20, mutationRate=0.01, generations=500)
+    min_dist, route, trace = geneticAlgorithm(population=cityList, max_time = max_time, random_seed = random_seed, input_GA=input_GA, popSize=100, eliteSize=20, mutationRate=0.01, generations=500)
     return min_dist, route, trace
 
 # ## Running the genetic algorithm
