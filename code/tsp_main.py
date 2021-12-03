@@ -53,8 +53,9 @@ elif(method == 'SA'):
 	input_xy_SA = []
 	for i in input_SA:
 		input_xy_SA.append((i[1], i[2]))
-
-	min_dist, route, trace = executeanneal(input_xy_SA, max_iter = 100000)
+		
+	sa = simanneal(input_xy_SA, max_iter = 50000)
+	min_dist, route, trace = sa.executeanneal()
 
 trace = [",".join(map(str,x)) for x in trace]
 tour_data = []
