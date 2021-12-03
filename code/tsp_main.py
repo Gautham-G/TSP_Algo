@@ -5,7 +5,7 @@ import pandas as pd
 import networkx as nx
 from scipy.spatial import distance_matrix
 from optparse import OptionParser
-import GA
+from GA import *
 import argparse
 import SA
 import Approx
