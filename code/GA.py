@@ -232,7 +232,7 @@ def nextGeneration(currentGen, eliteSize, mutationRate):
 
 
     
-def geneticAlgorithm(population,max_time, random_seed, input_GA, popSize, eliteSize, mutationRate, generations, ):
+def geneticAlgorithm(population,max_time, random_seed, input_GA, popSize, eliteSize, mutationRate, generations):
     random.seed(random_seed)
     start = time.time()
     trace = []
