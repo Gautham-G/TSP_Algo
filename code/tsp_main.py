@@ -54,7 +54,7 @@ elif(method == 'SA'):
 	for i in input_SA:
 		input_xy_SA.append((i[1], i[2]))
 		
-	sa = simanneal(input_xy_SA, max_time)
+	sa = simanneal(input_xy_SA, max_time, random_seed)
 	min_dist, route, trace = sa.executeanneal()
 
 trace = [",".join(map(str,x)) for x in trace]
