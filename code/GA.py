@@ -234,6 +234,7 @@ def nextGeneration(currentGen, eliteSize, mutationRate):
     
 def geneticAlgorithm(population,max_time, random_seed, input_GA, popSize, eliteSize, mutationRate, generations):
     random.seed(random_seed)
+# population=cityList, max_time = max_time, random_seed = random_seed, input_GA=input_xy_GA, popSize=100, eliteSize=20, mutationRate=0.01, generations=500
     start = time.time()
     trace = []
     pop = initialPopulation(popSize, population)
