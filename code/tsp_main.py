@@ -32,6 +32,7 @@ def write_output(file_ptr,datalines):
 
 if(method=='GA'):	
 	min_dist, route, trace = runGA(instance, max_time, random_seed)
+	print(trace)
 
 elif(method == 'BnB'):
 	n=int(open(instance).readlines()[2][len('DIMENSION: '):])
