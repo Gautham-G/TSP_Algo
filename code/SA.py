@@ -6,8 +6,9 @@ import pandas as pd
 import time
 
 class simanneal(object):
-    def __init__(self, points, max_time):
+    def __init__(self, points, max_time, random_seed):
         
+        self.seed = random_seed
         self.points = points
         self.n = len(points)
         self.T_max = (self.n)**0.5
@@ -57,6 +58,7 @@ class simanneal(object):
     
     def executeanneal(self):
         
+        rd.
         start = time.time()
         trace = []
         self.present_sol, self.present_dist = self.randompick() 
