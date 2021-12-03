@@ -261,7 +261,7 @@ def geneticAlgorithm(population,max_time, random_seed, input_GA, popSize, eliteS
         best_route_co_GA.append(a)
     best_route_GA = []
     for q in best_route_co_GA:
-        for p in input:
+        for p in input_GA:
             if(q[0]==p[1]):
                 if(q[1]==p[2]):
                     best_route_GA.append(int(p[0]-1))
