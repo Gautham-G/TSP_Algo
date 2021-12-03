@@ -32,7 +32,7 @@ def write_output(file_ptr,datalines):
 
 if(method=='GA'):
 
-	n_GA=int(open('../data/'+instance).readlines()[2][len('DIMENSION: '):])
+	n_GA=int(open('./data/'+instance).readlines()[2][len('DIMENSION: '):])
 	input_GA=np.loadtxt(instance,skiprows=5,max_rows=n_GA)
 	input_xy_GA = []
 	for i in input_GA:
