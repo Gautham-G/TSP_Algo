@@ -67,7 +67,7 @@ class simanneal(object):
             nextelem[b:(a+b)] = reversed(nextelem[b:(a+b)])
             flag = self.criterion(nextelem)
             if flag == 1:
-                trace.append([(time.time()-start)*1000, self.present_dist])
+                trace.append([np.round((time.time()-start),2), self.present_dist])
             self.T *= self.alpha
             self.iter += 1
             self.best_list.append(self.present_dist)
