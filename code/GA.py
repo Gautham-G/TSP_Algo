@@ -271,9 +271,9 @@ def geneticAlgorithm(population,max_time, random_seed, input_GA, popSize, eliteS
     return final_dist, best_route_GA, trace
 
 def runGA(instance, max_time, random_seed):
-    n_GA=int(open('../data/'+instance).readlines()[2][len('DIMENSION: '):])
+    n_GA=int(open(instance).readlines()[2][len('DIMENSION: '):])
 	
-    input_GA=np.loadtxt('../data/'+instance,skiprows=5,max_rows=n_GA)
+    input_GA=np.loadtxt(instance,skiprows=5,max_rows=n_GA)
     input_xy_GA = []
     for i in input_GA:
     	input_xy_GA.append((i[1], i[2]))
