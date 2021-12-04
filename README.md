@@ -1,6 +1,12 @@
 # CSE 6140 - TSP project
 
+Project Team:
+* Gautham Gururajan
+* Vishal Hariharan
+* Aranya Banerjee 
+
 Analysis of Algorithms to solve the TSP
+
 
 ## OS
 
